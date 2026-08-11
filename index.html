@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NEON HANDS</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- MediaPipe -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+</head>
+
+<body>
+
+  <div class="title">
+    <h1>NEON HANDS</h1>
+    <p>Move your hands and control the energy</p>
+  </div>
+
+  <div class="camera-box">
+
+    <video class="input-video" autoplay playsinline></video>
+
+    <canvas class="output-canvas"></canvas>
+
+    <div class="loading" id="loading">
+      🖐️ Starting hand tracking...
+    </div>
+
+  </div>
+
+  <div class="controls">
+
+    <button onclick="setMode('rainbow')">
+      🌈 Rainbow
+    </button>
+
+    <button onclick="setMode('cyber')">
+      ⚡ Cyber
+    </button>
+
+    <button onclick="setMode('fire')">
+      🔥 Fire
+    </button>
+
+    <button onclick="setMode('ocean')">
+      🌊 Ocean
+    </button>
+
+    <button onclick="setMode('galaxy')">
+      🌌 Galaxy
+    </button>
+
+  </div>
+
+  <div class="status">
+    <span id="mode">MODE: RAINBOW</span>
+    <span id="hands">HANDS: 0</span>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
